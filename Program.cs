@@ -2,7 +2,7 @@
 
 Console.WriteLine("Bem vindo ao Desafio de POO do DecolaTech.");
 
-int Funcionando = 1;
+bool Funcionando = true;
 
 do
 {
@@ -15,7 +15,7 @@ do
         nokia.Ligar();
         nokia.ReceberLigacao();
         nokia.InstalarAplicativo("Telegram");
-        Funcionando = 0;
+        Funcionando = false;
 
     }else if(ModeloCelular.ToLower() == "iphone")
     {
@@ -23,12 +23,12 @@ do
         iphone.Ligar();
         iphone.ReceberLigacao();
         iphone.InstalarAplicativo("Meets"); 
-        Funcionando = 0;
+        Funcionando = false;
 
     }else 
     {
         Console.WriteLine("Modelo não cadastrado, favor escolher entre os modelos Nokia ou Iphone. \nCaso seu celular não seja desse modelo digite 's' para sair.");
         var sair = Console.ReadLine().ToLower();
-        if (sair  == "s"){Funcionando = 0;}
+        if (sair  == "s"){Funcionando = false;}
     }
-}while (Funcionando == 1);
+}while (Funcionando);
